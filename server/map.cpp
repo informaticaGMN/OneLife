@@ -6688,7 +6688,7 @@ void getEvePosition( const char *inEmail, int *outX, int *outY,
     
     int result = eveDBGet( inEmail, &pX, &pY, &pR );
     
-    if( inAllowRespawn && result == 1 && pR > 0 ) {
+    if(result == 1 && pR > 0 ) {
         printf( "Found camp center (%d,%d) r=%d in db for %s\n",
                 pX, pY, pR, inEmail );
         
