@@ -6688,7 +6688,7 @@ void getEvePosition( const char *inEmail, int *outX, int *outY,
     
     int result = eveDBGet( inEmail, &pX, &pY, &pR );
     
-    if( inAllowRespawn && result == 1 && pR > 0 ) {
+    if(result == 1 && pR > 0 ) {
         printf( "Found camp center (%d,%d) r=%d in db for %s\n",
                 pX, pY, pR, inEmail );
         
@@ -6841,7 +6841,7 @@ void mapEveDeath( const char *inEmail, double inAge, GridPos inDeathMapPos ) {
     printf( "Logging Eve death:   " );
     
 
-    if( inAge < minEveCampRespawnAge ) {
+    if( inAge < 10 ) {
         printf( "Eve died too young (age=%f, min=%f), "
                 "not remembering her camp, and clearing any old camp memory\n",
                 inAge, minEveCampRespawnAge );

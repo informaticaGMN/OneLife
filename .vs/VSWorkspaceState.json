@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\curseServer",
+    "\\documentation",
+    "\\documentation\\html",
+    "\\documentation\\html\\newsImages",
+    "\\gameSource\\settings",
+    "\\scripts\\cronDataFiles",
+    "\\scripts\\linuxDesktop",
+    "\\server",
+    "\\server\\settings"
+  ],
+  "SelectedNode": "\\server\\settings\\apocalypsePossible.ini",
+  "PreviewInSolutionExplorer": false
+}
