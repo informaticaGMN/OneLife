@@ -86,7 +86,7 @@ int babyAge = 5;
 int defaultActionAge = 3;
 
 
-double forceDeathAge = 120;
+double forceDeathAge = 60;
 
 
 double minSayGapInSeconds = 1.0;
@@ -103,7 +103,7 @@ char apocalypseStarted = false;
 char postApocalypseStarted = false;
 
 
-double remoteApocalypseCheckInterval = 3000;
+double remoteApocalypseCheckInterval = 30;
 double lastRemoteApocalypseCheckTime = 0;
 WebRequest *apocalypseRequest = NULL;
 
@@ -117,7 +117,7 @@ int monumentCallID = 0;
 
 
 
-static double minFoodDecrementSeconds = 6.0;
+static double minFoodDecrementSeconds = 5.0;
 static double maxFoodDecrementSeconds = 20;
 static int babyBirthFoodDecrement = 10;
 
@@ -131,8 +131,8 @@ static int eatBonus = 0;
 static unsigned int nextSequenceNumber = 1;
 
 
-static int requireClientPassword = 0;
-static int requireTicketServerCheck = 0;
+static int requireClientPassword = 1;
+static int requireTicketServerCheck = 1;
 static char *clientPassword = NULL;
 static char *ticketServerURL = NULL;
 static char *reflectorURL = NULL;
@@ -219,8 +219,7 @@ typedef struct LiveObject {
         char curseTokenUpdate;
 
 
-        char is
-		;        
+        char isEve;        
 
         char isTutorial;
         
@@ -15163,4 +15162,3 @@ void startOutputAllFrames() {
 
 void stopOutputAllFrames() {
     }
-
