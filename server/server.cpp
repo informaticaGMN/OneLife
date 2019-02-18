@@ -86,7 +86,7 @@ int babyAge = 5;
 int defaultActionAge = 3;
 
 
-double forceDeathAge = 60;
+double forceDeathAge = 120;
 
 
 double minSayGapInSeconds = 1.0;
@@ -117,13 +117,13 @@ int monumentCallID = 0;
 
 
 
-static double minFoodDecrementSeconds = 5.0;
+static double minFoodDecrementSeconds = 6.0;
 static double maxFoodDecrementSeconds = 20;
 static int babyBirthFoodDecrement = 10;
 
 // bonus applied to all foods
 // makes whole server a bit easier (or harder, if negative)
-static int eatBonus = 0;
+static int eatBonus = 1;
 
 
 // keep a running sequence number to challenge each connecting client
@@ -1848,10 +1848,10 @@ int computeFoodCapacity( LiveObject *inPlayer ) {
         }
     else {
         // food capacity decreases as we near 60
-        int cap = 60 - ageInYears + 4;
+        int cap = 120 - ageInYears + 8;
         
-        if( cap < 4 ) {
-            cap = 4;
+        if( cap < 8 ) {
+            cap = 8;
             }
         
         returnVal = cap;
