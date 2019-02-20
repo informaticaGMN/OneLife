@@ -6836,7 +6836,7 @@ void mapEveDeath( const char *inEmail, double inAge, GridPos inDeathMapPos ) {
 
     int pX, pY, pR;
 
-    pR = eveRadius;
+    pR = 0;
     
     printf( "Logging Eve death:   " );
     
@@ -6847,7 +6847,7 @@ void mapEveDeath( const char *inEmail, double inAge, GridPos inDeathMapPos ) {
                 inAge, minEveCampRespawnAge );
         
         // 0 for radius means not set
-        eveDBPut( inEmail, 0, 0, 0 );
+        //eveDBPut( inEmail, 0, 0, 0 );
 
         return;
         }
