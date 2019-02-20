@@ -198,7 +198,7 @@ static double eveAngle = 2 * M_PI;
 // what human-placed stuff, together, counts as a camp
 static int campRadius = 20;
 
-static float minEveCampRespawnAge = 60.0;
+static float minEveCampRespawnAge = 14.0;
 
 
 extern int apocalypsePossible;
@@ -2365,8 +2365,8 @@ char initMap() {
     
     edgeObjectID = SettingsManager::getIntSetting( "edgeObject", 0 );
     
-    minEveCampRespawnAge = 
-        SettingsManager::getFloatSetting( "minEveCampRespawnAge", 60.0f );
+    minEveCampRespawnAge = 14
+        //SettingsManager::getFloatSetting( "minEveCampRespawnAge", 60.0f );
     
 
     for( int i=0; i<NUM_RECENT_PLACEMENTS; i++ ) {
