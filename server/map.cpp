@@ -6827,7 +6827,16 @@ void getEvePosition( const char *inEmail, int *outX, int *outY,
     clearRecentPlacements();
     }
 
+int writeFile (const char *inEmail) 
+{
+  ofstream myfile;
+  myfile.open ("example.txt");
+  auto s = inEmail::to_string()
+  myfile << s;
 
+  myfile.close();
+  return 0;
+}
 
 
 void mapEveDeath( const char *inEmail, double inAge, GridPos inDeathMapPos ) {
@@ -6840,8 +6849,8 @@ void mapEveDeath( const char *inEmail, double inAge, GridPos inDeathMapPos ) {
     //inEmail = teste;
     pR = 0;
     eveDBPut( inEmail, inDeathMapPos.x, inDeathMapPos.y, 0 );
-    
-    printf( "This is the inmail string ", inEmail );
+    writeFile(inEmail)
+    //printf( "This is the inmail string ", inEmail );
     
 
     if( inAge < 10 ) {
