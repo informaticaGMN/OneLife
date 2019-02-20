@@ -4980,7 +4980,7 @@ int processLoggedInPlayer( Socket *inSock,
             // (and they are NOT a solo player on an empty server)
             // don't allow them to spawn back at their last old-age Eve death
             // location.
-            allowEveRespawn = false;
+            allowEveRespawn = true;
             }
 
         // else starts at civ outskirts (lone Eve)
