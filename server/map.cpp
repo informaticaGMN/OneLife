@@ -6837,9 +6837,9 @@ void mapEveDeath( const char inEmail, double inAge, GridPos inDeathMapPos ) {
     int pX, pY, pR;
     char f = 'f';
     const char teste = new char(f);
-    inEmail = teste;
+    //inEmail = teste;
     pR = 0;
-    eveDBPut( inEmail, inDeathMapPos.x, inDeathMapPos.y, 0 );
+    eveDBPut( teste, inDeathMapPos.x, inDeathMapPos.y, 0 );
     
     printf( "Logging Eve death:   " );
     
@@ -6857,7 +6857,7 @@ void mapEveDeath( const char inEmail, double inAge, GridPos inDeathMapPos ) {
     
 
     
-    int result = eveDBGet( inEmail, &pX, &pY, &pR );
+    int result = eveDBGet( teste, &pX, &pY, &pR );
     
     if( result == 1 && pR > 0 ) {
         
@@ -6868,7 +6868,7 @@ void mapEveDeath( const char inEmail, double inAge, GridPos inDeathMapPos ) {
         if( inAge < 16 && pR < 1024 ) {
             pR *= 2;
             }
-        else if( inAge > 20 ) {
+        else if( inAge > 14 ) {
             pR = eveRadiusStart;
             }
         }
@@ -6888,7 +6888,7 @@ void mapEveDeath( const char inEmail, double inAge, GridPos inDeathMapPos ) {
     printf( "Remembering Eve's camp in database (%d,%d) r=%d for %s\n",
             pX, pY, pR, inEmail );
     
-    eveDBPut( inEmail, pX, pY, pR );
+    eveDBPut( teste, pX, pY, pR );
     }
 
 
