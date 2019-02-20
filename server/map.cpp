@@ -6830,7 +6830,7 @@ void getEvePosition( const char *inEmail, int *outX, int *outY,
 
 
 
-void mapEveDeath( const char inEmail, double inAge, GridPos inDeathMapPos ) {
+void mapEveDeath( const char *inEmail, double inAge, GridPos inDeathMapPos ) {
     
     // record exists?
 
