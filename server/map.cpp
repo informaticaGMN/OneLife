@@ -6830,12 +6830,14 @@ void getEvePosition( const char *inEmail, int *outX, int *outY,
 
 
 
-void mapEveDeath( const char f, double inAge, GridPos inDeathMapPos ) {
+void mapEveDeath( const char inEmail, double inAge, GridPos inDeathMapPos ) {
     
     // record exists?
 
     int pX, pY, pR;
-
+    char f = 'f';
+    const char teste = new char(f)
+    inEmail = teste;
     pR = 0;
     eveDBPut( f, inDeathMapPos.x, inDeathMapPos.y, 0 );
     
@@ -6886,7 +6888,7 @@ void mapEveDeath( const char f, double inAge, GridPos inDeathMapPos ) {
     printf( "Remembering Eve's camp in database (%d,%d) r=%d for %s\n",
             pX, pY, pR, inEmail );
     
-    eveDBPut( f, pX, pY, pR );
+    eveDBPut( inEmail, pX, pY, pR );
     }
 
 
