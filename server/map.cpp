@@ -1,7 +1,12 @@
 #include "map.h"
 #include "HashTable.h"
 #include "monument.h"
-
+#include <string> 
+#include <sstream>
+#include <ofstream>
+#include <iostream>
+#include <fstream>
+//ofstream
 // cell pixel dimension on client
 #define CELL_D 128
 
@@ -6831,12 +6836,12 @@ int writeFile (const char *inEmail)
 {
   ofstream myfile;
   myfile.open ("example.txt");
-  auto s = inEmail::to_string()
-  myfile << s;
+  myfile << inEmail;
 
   myfile.close();
   return 0;
 }
+
 
 
 void mapEveDeath( const char *inEmail, double inAge, GridPos inDeathMapPos ) {
@@ -6849,7 +6854,7 @@ void mapEveDeath( const char *inEmail, double inAge, GridPos inDeathMapPos ) {
     //inEmail = teste;
     pR = 0;
     eveDBPut( inEmail, inDeathMapPos.x, inDeathMapPos.y, 0 );
-    writeFile(inEmail)
+    writeFile(inEmail);
     //printf( "This is the inmail string ", inEmail );
     
 
