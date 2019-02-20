@@ -2365,7 +2365,7 @@ char initMap() {
     
     edgeObjectID = SettingsManager::getIntSetting( "edgeObject", 0 );
     
-    minEveCampRespawnAge = 14
+    minEveCampRespawnAge = 14;
         //SettingsManager::getFloatSetting( "minEveCampRespawnAge", 60.0f );
     
 
