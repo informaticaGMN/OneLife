@@ -6839,7 +6839,7 @@ void mapEveDeath( const char inEmail, double inAge, GridPos inDeathMapPos ) {
     const char teste = new char(f);
     inEmail = teste;
     pR = 0;
-    eveDBPut( f, inDeathMapPos.x, inDeathMapPos.y, 0 );
+    eveDBPut( inEmail, inDeathMapPos.x, inDeathMapPos.y, 0 );
     
     printf( "Logging Eve death:   " );
     
