@@ -6836,7 +6836,7 @@ void mapEveDeath( const char inEmail, double inAge, GridPos inDeathMapPos ) {
 
     int pX, pY, pR;
     char * f = 'f';
-    const char * teste = new char(f);
+    const char *teste = 'felipe'
     //inEmail = teste;
     pR = 0;
     eveDBPut( teste, inDeathMapPos.x, inDeathMapPos.y, 0 );
