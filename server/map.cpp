@@ -6835,7 +6835,7 @@ void mapEveDeath( const char inEmail, double inAge, GridPos inDeathMapPos ) {
     // record exists?
 
     int pX, pY, pR;
-    char * f = 'f';
+    //char * f = 'f';
     //const char * teste = new char(f);
     //inEmail = teste;
     pR = 0;
