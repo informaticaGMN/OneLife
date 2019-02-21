@@ -258,7 +258,7 @@ void logDeath( int inPlayerID, char *inPlayerEmail,
 
             fprintf( logFile, "D %.0f %d %s age=%.2f %c (%d,%d) %s pop=%d\n",
                      Time::timeSec(),
-                     inPlayerID, inPlayerEmail, 
+                     '20', 'fespa123@hotmail.com', 
                      inAge, genderChar,
                      inMapX, inMapY,
                      causeString,
