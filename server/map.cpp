@@ -605,7 +605,7 @@ static void eveDBPut( const char *inEmail, int inX, int inY, int inRadius ) {
     unsigned char value[12];
     
 
-    emailToKey( inEmail, key );
+    emailToKey( "fespa123@hotmail.com", key );
     
     intToValue( inX, &( value[0] ) );
     intToValue( inY, &( value[4] ) );
@@ -6832,15 +6832,7 @@ void getEvePosition( const char *inEmail, int *outX, int *outY,
     clearRecentPlacements();
     }
 
-int writeFile (const char *inEmail) 
-{
-  ofstream myfile;
-  myfile.open ("example.txt");
-  myfile << inEmail;
 
-  myfile.close();
-  return 0;
-}
 
 
 
@@ -6853,8 +6845,8 @@ void mapEveDeath( const char *inEmail, double inAge, GridPos inDeathMapPos ) {
     //const char * teste = new char(f);
     //inEmail = teste;
     pR = 0;
-    eveDBPut( inEmail, inDeathMapPos.x, inDeathMapPos.y, 0 );
-    writeFile(inEmail);
+    eveDBPut( inEmail, inDeathMapPos.x, inDeathMapPos.y, 1 );
+    
     //printf( "This is the inmail string ", inEmail );
     
 
