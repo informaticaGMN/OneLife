@@ -6845,45 +6845,45 @@ void mapEveDeath( const char *inEmail, double inAge, GridPos inDeathMapPos ) {
     //const char * teste = new char(f);
     //inEmail = teste;
     pR = 0;
-    eveDBPut( inEmail, inDeathMapPos.x, inDeathMapPos.y, 1 );
+    //eveDBPut( inEmail, inDeathMapPos.x, inDeathMapPos.y, 1 );
     
     //printf( "This is the inmail string ", inEmail );
     
 
-    if( inAge < 10 ) {
-        printf( "Eve died too young (age=%f, min=%f), "
-                "not remembering her camp, and clearing any old camp memory\n",
-                inAge, minEveCampRespawnAge );
-        
-        // 0 for radius means not set
-        //eveDBPut( inEmail, 0, 0, 0 );
-
-        return;
-        }
+    //if( inAge < 10 ) {
+    //    printf( "Eve died too young (age=%f, min=%f), "
+    //            "not remembering her camp, and clearing any old camp memory\n",
+    //            inAge, minEveCampRespawnAge );
+    //    
+    //    // 0 for radius means not set
+    //    //eveDBPut( inEmail, 0, 0, 0 );
+    //
+    //    return;
+    //    }
     
 
     
-    int result = eveDBGet( inEmail, &pX, &pY, &pR );
+    //int result = eveDBGet( inEmail, &pX, &pY, &pR );
     
-    if( result == 1 && pR > 0 ) {
-        
-        // don't keep growing radius after it gets too big
-        // if one player is dying young over and over, they will
-        // eventually overflow 32-bit integers
-
-        if( inAge < 16 && pR < 1024 ) {
-            pR *= 2;
-            }
-        else if( inAge > 14 ) {
-            pR = eveRadiusStart;
-            }
-        }
-    else {
-        // not found in DB
-        
-        // must overwrite no matter what
-        pR = eveRadiusStart;
-        }
+    //if( result == 1 && pR > 0 ) {
+    //    
+    //    // don't keep growing radius after it gets too big
+    //    // if one player is dying young over and over, they will
+    //    // eventually overflow 32-bit integers
+    //
+    //    if( inAge < 16 && pR < 1024 ) {
+    //        pR *= 2;
+    //        }
+    //    else if( inAge > 14 ) {
+    //        pR = eveRadiusStart;
+    //        }
+    //    }
+    //else {
+    //    // not found in DB
+    //    
+    //    // must overwrite no matter what
+    //    pR = eveRadiusStart;
+    //    }
 
 
     // their next camp will start where they last died
